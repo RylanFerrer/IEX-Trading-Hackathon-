@@ -20,13 +20,16 @@ function getRandomCompanies(data)
     let filteredData = data.filter(checkName);
     let randomArray = [];
     
-    //loop 100 times and get 100 random companies
-   for(let i = 0; i < 100; i++)
+   while(randomArray.length !== 100)
    {
-       let random =  Math.floor(Math.random() * filteredData.length);
-       randomArray.push(filteredData[random]);
+    let random =  Math.floor(Math.random() * filteredData.length);
+       
+           if (randomArray.indexOf(filteredData[random]) === -1)
+           {
+               randomArray.push(filteredData[random]);
+           }
+           
    }
-
    return randomArray
  }
 
