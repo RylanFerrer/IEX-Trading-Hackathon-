@@ -42,7 +42,7 @@ function getRandomCompanies(data)
        return newArray
  }
  function createCards(arr) {
-    let container = document.querySelector(".card-containerz");
+    let container = document.querySelector(".card-div");
     for (i = 0; i < arr.length; i++) {
       let card = document.createElement("div");
       card.classList.add("card-container");
@@ -69,12 +69,15 @@ function getRandomCompanies(data)
    function filterFunction() {
     let searchInput = document.querySelector("#my-input");
     let filter = searchInput.value.toUpperCase();
-    let cardSection = document.querySelector(".card-containerz");
+    let cardSection = document.querySelector(".card-div");
+
     let card = cardSection.getElementsByClassName("card-container");
     for (i = 0; i < card.length; i++) {
       let symbol = card[i].getElementsByClassName("card-container__symbol")[0];
+      let name = card[i].getElementsByClassName("card-container__name")[0];
       let textContent = symbol.innerText;
-      if (textContent.toUpperCase().indexOf(filter) > -1) {
+      let textContentName= name.innerText;
+      if (textContent.toUpperCase().indexOf(filter) > -1 ||textContentName.toUpperCase().indexOf(filter) > -1  ) {
         card[i].style.display = "";
       } else {
         card[i].style.display = "none";
