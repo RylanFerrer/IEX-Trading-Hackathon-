@@ -1,0 +1,48 @@
+body {
+  background-color: brown;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5vw;
+}
+
+.header-title {
+  font-size: 2em;
+  width: 900px;
+  margin: 0;
+  color: white;
+}
+
+.card__text-input {
+  width: 30vw;
+  height: 3vw;
+  border-radius: 15px;
+}
+
+.card-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: darksalmon;
+  width: 20%;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 20px;
+  height: 250px;
+  margin-top: 4vw;
+}
+/*# sourceMappingURL=main.css.map */

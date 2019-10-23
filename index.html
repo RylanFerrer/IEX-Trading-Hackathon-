@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Exchange</title>
 </head>
 <body>
+        <input
+        type="text"
+        placeholder="Search for a company"
+        onkeyup="filterFunction()"
+        id="my-input"
+      />
+    <section class="card-containerz"></section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/api_info.js"></script>
     <script src="./scripts/app.js"></script>
