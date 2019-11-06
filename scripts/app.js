@@ -1,4 +1,4 @@
-
+getApiData("https://api.iextrading.com/1.0/ref-data/symbols");
 //this function will get random companies from the api data
 function getApiData(url)
 {
@@ -18,6 +18,7 @@ function getRandomCompanies(data)
  {  
      //this filters the function and returns an array of objects that have names
     let filteredData = data.filter(checkName);
+    console.log(filteredData);
     let randomArray = [];
     
    while(randomArray.length !== 100)
@@ -27,15 +28,13 @@ function getRandomCompanies(data)
            if (randomArray.indexOf(filteredData[random]) === -1)
            {
                randomArray.push(filteredData[random]);
-           }
-           
+           }     
    }
    return randomArray
  }
 
  // this function will structure the objects for only the data we need to use 
  function structureObjectData(array) 
- //[1,2,3] mapped item  (1)=> 1 * 2 
  {
        let newArray = array.map( item => ({symbol: item.symbol,name: item.name, id:item.iexId}));
        console.log(newArray);
@@ -88,4 +87,3 @@ function getRandomCompanies(data)
 
 
 
- getApiData("https://api.iextrading.com/1.0/ref-data/symbols");

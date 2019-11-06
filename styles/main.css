@@ -1,6 +1,15 @@
+body {
+  background-image: url("../../assets/city.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .main-head {
   color: white;
   text-align: left;
+  margin: 0;
   margin-right: 20px;
 }
 
@@ -11,6 +20,7 @@
 }
 
 header {
+  z-index: 1;
   background-color: black;
   margin: 0;
   height: 80px;
@@ -26,11 +36,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body {
-  margin: 0;
-  background-color: white;
 }
 
 .header-title {
@@ -64,9 +69,11 @@ body {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center;
-  background-color: darksalmon;
+  background-color: black;
+  color: white;
+  opacity: 0.85;
   width: 30%;
   margin: 20px 0;
 }
